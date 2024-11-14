@@ -1,0 +1,19 @@
+
+type Inmueble {
+    id: ID!
+    direccion: String!
+    tipo: String!
+    superficie: Float
+    valor: Float
+    descripcion: String
+    persona: Persona
+}
+
+input inmuebleInput {
+    direccion: String
+    tipo: String
+    superficie: Float
+    valor: Float
+    descripcion: String
+    personaId: String
+}

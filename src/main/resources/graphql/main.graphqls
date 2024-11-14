@@ -1,0 +1,29 @@
+
+type Query {
+    getUserById(id: String): User
+    getAllUsers: [User]
+
+    getRoleById(id: String): Role
+    getAllRole: [Role]
+
+    getPersonaById(id: String): Persona
+    getAllPersonas: [Persona]
+
+    getAllInmuebles: [Inmueble]
+    getInmuebleById(id: String): Inmueble
+}
+
+type Mutation {
+
+    createUser(input: UserInput): User
+    updateUser(id: ID!, input: UserInput): User
+    deleteUser(id: ID!): String
+
+    addPersona(input: PersonaInput): Persona
+    updatePersona(id: ID!, input: PersonaInput): Persona
+    deletePersona(id: ID!): Boolean
+
+    createInmueble(input: inmuebleInput): Inmueble
+    updateInmueble(id: String, input: inmuebleInput): Inmueble
+    deleteInmueble(id: String): Boolean
+}
